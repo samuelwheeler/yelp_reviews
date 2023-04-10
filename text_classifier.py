@@ -137,7 +137,7 @@ class Review_Classifier(nn.Module):
         self.cls_token = nn.Parameter(torch.randn(1, 1, embedding_dim))
         self.dropout = nn.Dropout(emb_dropout)
 
-        self.transformer = Transformer(dim, depth, heads, dim_head, mlp_dim, dropout, attention_type = attention_type)
+        self.transformer = Transformer(dim = dim, depth = depth, heads = heads, dim_head = dim_head, mlp_dim = mlp_dim, dropout = dropout, attention_type = attention_type)
 
         self.pool = pool
         #self.to_latent = nn.Identity()
