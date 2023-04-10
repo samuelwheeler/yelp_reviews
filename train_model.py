@@ -38,7 +38,7 @@ test_set = YD.YelpData(path = 'test_set')
 # device 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(device)
-embedding_weights = torch.load('embedding_weights')
+embedding_weights = torch.load('./embedding_weights.pt')
 # define model:
 model = TC.Review_Classifier(embedding_weights = embedding_weights, 
                              sentence_length = sentence_length,
