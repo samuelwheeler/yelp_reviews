@@ -19,8 +19,7 @@ import numpy as np
 # set hyperparameters and initial conditions
 batch_size = 2048
 depth = 20
-numblocks = 16
-dim = 50
+dim = 128
 sentence_length = 100
 heads = 10
 dropout = 0.1
