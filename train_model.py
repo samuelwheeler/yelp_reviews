@@ -25,7 +25,7 @@ heads = 10
 dropout = 0.1
 embedding_dim = 50
 num_classes = 5
-epochs = 50
+epochs = 20
 initial_lr = 0.0001
 attention_type = 'quintic'
 
