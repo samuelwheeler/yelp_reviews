@@ -10,7 +10,7 @@ test_data = dataset['test']
 
 
 # File path
-embedding_file = '/content/drive/MyDrive/language_classification/glove.twitter.27B.50d.txt'
+embedding_file = './glove.twitter.27B.50d.txt'
 
 # read in embeddings
 def get_coefs(word,*arr): return word, np.asarray(arr, dtype='float32')
