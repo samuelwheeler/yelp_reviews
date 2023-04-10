@@ -31,7 +31,8 @@ initial_lr = 0.0001
 
 
 
-
+train_set = YD.YelpData(path = 'train_set')
+test_set = YD.YelpData(path = 'test_set')
 
 
 # device 
@@ -57,8 +58,7 @@ optimizer = optim.Adam(model.parameters(), lr = initial_lr)
 
 
 
-train_set = YD.YelpData(path = 'train_set')
-test_set = YD.YelpData(path = 'test_set')
+
 
 
 trainloader = torch.utils.data.DataLoader(train_set, batch_size=batch_size,
