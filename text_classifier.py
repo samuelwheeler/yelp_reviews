@@ -196,7 +196,8 @@ class Review_Classifier(nn.Module):
         x = torch.cat((cls_tokens, x), dim=1)
         x += self.pos_embedding[:, :(n + 1)]
         x = self.dropout(x)
-        x = self.to_model_dim(x)
+        if dim == embedding_dim:
+            x = self.to_model_dim(x)
         x = self.transformer(x)
         x = x.mean(dim = 1) if self.pool == 'mean' else x[:, 0]
         return self.mlp_head(x)
