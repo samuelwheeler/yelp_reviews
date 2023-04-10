@@ -94,8 +94,8 @@ class Review_Classifier(nn.Module):
         assert pool in {'cls', 'mean'}, 'pool type must be either cls (cls token) or mean (mean pooling)'
 
         
-        self.pos_embedding = nn.Parameter(torch.randn(1, 101, dim))
-        self.cls_token = nn.Parameter(torch.randn(1, 1, dim))
+        self.pos_embedding = nn.Parameter(torch.randn(1, 101, embedding_dim))
+        self.cls_token = nn.Parameter(torch.randn(1, 1, embedding_dim))
         self.dropout = nn.Dropout(emb_dropout)
 
         self.transformer = Transformer(dim, depth, heads, dim_head, mlp_dim, dropout)
