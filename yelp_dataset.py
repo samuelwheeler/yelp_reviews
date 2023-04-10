@@ -34,8 +34,8 @@ class YelpData(Dataset):
             self.labels = torch.tensor(labels, dtype = torch.long)
             self.length = self.labels.shape[0]
         if path is not None:
-            self.tokens = torch.load(path + '_tokens')
-            self.labels = torch.load(path + '_labels')
+            self.tokens = torch.load('./' + path + '_tokens.pt')
+            self.labels = torch.load('./' + path + '_labels.pt')
             self.length = self.labels.shape[0]
 
     def __getitem__(self, idx):
